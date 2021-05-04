@@ -1,6 +1,6 @@
 import React from 'react';
 import { Grid, GridColumn as Column } from '@progress/kendo-react-grid';
-import { Input } from '@progress/kendo-react-inputs';
+import { Input, Checkbox } from '@progress/kendo-react-inputs';
 import {DropDownButton, DropDownButtonItem, SplitButton, SplitButtonItem} from "@progress/kendo-react-buttons";
 import products from '../../products.json';
 import search from '../../Assets/search.png';
@@ -35,10 +35,10 @@ class CustomerMaster extends React.Component {
                         data={[ ...products ]}
                     >
                         <Column
-                            field={<input type="checkbox" defaultChecked={false} />}
+                            field={<Checkbox defaultChecked={false} />}
                             cell={props => (
                                 <td>
-                                    <input type="checkbox" />
+                                    <Checkbox />
                                 </td>
                             )}
                             width="70px"

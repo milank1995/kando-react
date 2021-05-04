@@ -114,3 +114,8 @@ a {
     color: white !important;
     margin-left: 1px;
 }
+
+.k-checkbox:checked {
+    border-color: #2666E3 !important;
+    background-color: #2666E3 !important;
+}
