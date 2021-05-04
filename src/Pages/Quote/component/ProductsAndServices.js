@@ -16,7 +16,7 @@ class ProductsAndServices extends React.Component {
                         <TabStripTab title="Products">
                             <div>
                                 <Grid
-                                    data={[{
+                                    data={[] || [{
                                         "ProductID" : 1,
                                         "sortOrder": "1",
                                         "image": "https://www.reliancedigital.in/medias/Microsoft-Surface-Laptop-Go-Laptops-491946834-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wyMjIzMjJ8aW1hZ2UvanBlZ3xpbWFnZXMvaGVjL2gwNi85NDY2MzQ1Njg1MDIyLmpwZ3wwMGVjMzE3MTc3MjY4MjAyODQ5ZDBlYjkyNDcyOWZjYTBiNzY2ODhmNjFjNjAzN2I2OWQxY2JjMGZmODEzNmMw",
@@ -28,15 +28,16 @@ class ProductsAndServices extends React.Component {
                                         "enteredBy": "Saquib Jawed"
                                     }]}
                                 >
-                                    {/*<Column
-                                        field={<input type="checkbox" defaultChecked={false} />}
+                                    <Column
+                                        field="checkbox"
+                                        title={<input type="checkbox" defaultChecked={false}/>}
                                     />
                                     <Column
                                         title="Sort"
                                         field="part #"
                                     />
                                     <Column field="part #" title="Part #" />
-                                    <Column field="" title="Description" />
+                                    <Column field="description" title="Description"/>
                                     <Column field="mfrName" title="Last Price" />
                                     <Column field="price" title="Unit Price" />
                                     <Column field="catalog" title="Unit Cost" />
@@ -45,17 +46,17 @@ class ProductsAndServices extends React.Component {
                                     <Column field="enteredBy" title="Tax" />
                                     <Column field="enteredBy" title="Margins" />
                                     <Column field="enteredBy" title="% Off" />
-                                    <Column field="enteredBy" title="Action"  />*/}
-                                    <Column
-                                        title="Action"
-                                        footerCell={props => (
-                                            <td colSpan={1} className="k-text-center">
-                                                <Button primary={true} className="k-mr-5">Add Product</Button>
-                                                <Button primary={true}>Add Section</Button>
-                                            </td>
-                                        )}
-                                        colSpan={13}
-                                    />
+                                    <Column field="enteredBy" title="Action"/>
+                                    {/*<Column*/}
+                                    {/*    title="Action"*/}
+                                    {/*    footerCell={props => (*/}
+                                    {/*        <td colSpan={1} className="k-text-center">*/}
+                                    {/*            <Button primary={true} className="k-mr-5">Add Product</Button>*/}
+                                    {/*            <Button primary={true}>Add Section</Button>*/}
+                                    {/*        </td>*/}
+                                    {/*    )}*/}
+                                    {/*    colSpan={13}*/}
+                                    {/*/>*/}
                                 </Grid>
                             </div>
                         </TabStripTab>

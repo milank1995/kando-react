@@ -3,25 +3,32 @@ import { Grid, GridColumn as Column } from '@progress/kendo-react-grid';
 import { Input } from '@progress/kendo-react-inputs';
 import {DropDownButton, DropDownButtonItem, SplitButton, SplitButtonItem} from "@progress/kendo-react-buttons";
 import products from '../../products.json';
+import search from '../../Assets/search.png';
 import "../../App.css"
+import "./CustomerMaster.scss"
 
 class CustomerMaster extends React.Component {
     render() {
         return (
-            <div>
+            <div className="customer-master">
                 <div className="k-p-5">
-                    <div className="k-mb-5 k-d-flex k-justify-content-between">
-                        <div className="w-100">
-                            <Input placeholder={"Search Products..."} className="w-100" />
+                    <div className=" search-bar display-table  k-mb-5 k-d-flex k-justify-content-between">
+                        <div className="w-100 h-40 display-table-cell k-pr-10">
+                            <div className="search-input k-justify-content-start">
+                                <img src={search} alt="search"/>
+                                <Input placeholder={"Search Products..."} className="w-100 border-bottom-unset"/>
+                            </div>
                         </div>
-                        <div className="k-text-right k-d-flex">
-                            <SplitButton text="0 - 20 of 2,000" className="k-mr-3" />
-                            <DropDownButton text="Sort" icon="cog" className="k-mr-3" />
-                            <DropDownButton text="Filter" icon="k-icon k-i-saturation" className="k-mr-3" />
-                            <SplitButton text="Add" className="k-mr-3  primary-button" >
+                        <div className="display-table-cell">
+                            <div className="k-text-right k-d-flex h-40">
+                                <SplitButton text="0 - 20 of 2,000" className="k-mr-3 h-40"/>
+                                <DropDownButton text="Sort" icon="cog" className="k-mr-3 h-40"/>
+                                <DropDownButton text="Filter" icon="k-icon k-i-saturation" className="k-mr-3 h-40"/>
+                                <SplitButton text="Add" className="k-mr-3 h-40 primary-button add-button w-120px">
                                 <SplitButtonItem text="Add Product" />
                                 <SplitButtonItem text="Add Product Group" />
                             </SplitButton>
+                        </div>
                         </div>
                     </div>
                     <Grid
