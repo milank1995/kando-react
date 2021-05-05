@@ -1,6 +1,52 @@
 .customer-master {
+  tr:nth-child(even) {
+    background-color: #F7F7F7 !important;
+  }
+
+  .k-i-more-horizontal::before {
+    content: url("../../Assets/MenuDots.png") !important;
+  }
+
+  //
+  //.table-div {
+  //  .k-widget {
+  //    .k-grid-container {
+  //      .k-grid-content {
+  //        .k-grid-table {
+  //          width: 10% !important;
+  //
+  //          tbody {
+  //            background-color: #2666E3 !important;
+  //          }
+  //        }
+  //      }
+  //    }
+  //  }
+  //}
+  .order-td {
+    .k-button-group {
+      border: 1px solid #A2A2A2;
+      box-shadow: unset;
+
+      .k-button:first-child {
+        width: 40px !important;
+        height: 40px; //border-right: 1px solid #A2A2A2;
+        border-bottom-right-radius: unset;
+        border-top-right-radius: unset;
+      }
+
+      .k-button:last-child {
+        border-bottom-left-radius: unset;
+        border-top-left-radius: unset;
+        height: 40px;
+        width: 20px;
+        border-left: none;
+        //width: available;
+      }
+    }
+  }
   .search-bar {
-    height: 60px;
+    height: 50px;
     .search-input {
       display: flex !important;
       //justify-content:be;
@@ -13,9 +59,47 @@
       }
     }
 
+
+    //td {
+    //  .k-i-more-horizontal::before {
+    //    color: blue;
+    //  }
+    //}
+    colgroup:hover {
+      td {
+        background-color: #2666E3 !important;
+      }
+    }
+
+    .k-grid-table {
+
+    }
     padding: 10px 10px;
     background-color: #f7f7f7;
     //height: 60px !important;
+    .k-button {
+      box-shadow: unset;
+      border: 1px solid #A2A2A2;
+      border-radius: 3px;
+    }
+
+    .k-button-group {
+      box-shadow: unset;
+
+      .k-button:first-child {
+        //border-right: 1px solid #A2A2A2;
+        border-bottom-right-radius: unset;
+        border-top-right-radius: unset;
+      }
+
+      .k-button:last-child {
+        border-bottom-left-radius: unset;
+        border-top-left-radius: unset;
+        height: 40px;
+        border-left: none;
+        //width: available;
+      }
+    }
     .add-button {
       background-color: #f7f7f7 !important;
       box-shadow: unset !important;

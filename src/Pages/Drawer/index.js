@@ -12,20 +12,17 @@ const items = [
 ];
 
 
-const DrawerComponent = () => {
-    const [expanded, setExpanded] = React.useState(true);
+const DrawerComponent = ({toggleDrawer,expanded}) => {
     const [selectedId, setSelectedId] = React.useState(items.findIndex(x => x.selected === true));
-    const handleClick = () => { setExpanded(prevState => !prevState); };
     const handleSelect = (ev) => {
         setSelectedId(ev.itemIndex);
-        setExpanded(false);
     };
     const CustomItem = (props) => {
         return (
             <div className="drawer-content">
                 <div className="header">
                     <h2>Column Chooser</h2>
-                    <img className="k-cursor-pointer close-icon" src={Image} onClick={handleClick} />
+                    <img className="k-cursor-pointer close-icon" src={Image} onClick={toggleDrawer} />
                 </div>
                 <p>10 Columns selected</p>
 
@@ -65,8 +62,8 @@ const DrawerComponent = () => {
                 </div>
 
                 <div className="k-mt-5">
-                    <Button className="k-mr-3" primary={true} onClick={handleClick}>Save</Button>
-                    <Button onClick={handleClick}>Cancel</Button>
+                    <Button className="k-mr-3" primary={true} onClick={toggleDrawer}>Save</Button>
+                    <Button onClick={toggleDrawer}>Cancel</Button>
                 </div>
             </div>
         );
@@ -81,18 +78,11 @@ const DrawerComponent = () => {
                 animation={{ duration: 400 }}
                 items={items.map(
                     (item, index) => ({ ...item, selected: index === selectedId }))}
-                onOverlayClick={handleClick}
+                onOverlayClick={toggleDrawer}
                 item={CustomItem}
                 onSelect={handleSelect}
                 width={500}
             >
-                <DrawerContent>
-                    <div className="k-form">
-                        <div className="k-form-field">
-                            <button className="k-button" onClick={handleClick}>Toggle the Drawer state</button>
-                        </div>
-                    </div>
-                </DrawerContent>
             </Drawer>
         </div>
     );

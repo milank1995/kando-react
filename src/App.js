@@ -12,7 +12,6 @@ function App() {
         <Switch>
           <Route path="/" exact component={CustomerMaster} />
           <Route path="/1" exact component={Quote} />
-          <Route path="/2" exact component={DrawerComponent} />
         </Switch>
       </BrowserRouter>
     </div>
