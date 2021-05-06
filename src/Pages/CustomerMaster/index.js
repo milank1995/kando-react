@@ -4,12 +4,11 @@ import { Input, Checkbox } from '@progress/kendo-react-inputs';
 import {DropDownButton, DropDownButtonItem, SplitButton, SplitButtonItem} from "@progress/kendo-react-buttons";
 import products from '../../products.json';
 import search from '../../Assets/search.png';
-import MenuDots from "../../Assets/MenuDots.png"
 import LayerIcon from "../../Assets/LayerIcon.png"
-
+import Dot3 from "../../Assets/dot3.svg"
+import DrawerComponent from "../Drawer";
 import "../../App.css"
 import "./CustomerMaster.scss"
-import DrawerComponent from "../Drawer";
 
 class CustomerMaster extends React.Component {
     state = {
@@ -19,7 +18,6 @@ class CustomerMaster extends React.Component {
         this.setState({expanded: !this.state.expanded})
     };
     render() {
-        console.log(this.state);
         return (
             <div className="customer-master">
                 <DrawerComponent toggleDrawer={this.toggleDrawer} expanded={this.state.expanded}/>
@@ -33,9 +31,9 @@ class CustomerMaster extends React.Component {
                         </div>
                         <div className="display-table-cell">
                             <div className="k-text-right k-d-flex h-40">
-                                <SplitButton text="0 - 20 of 2,000" className="k-mr-3 h-40"/>
-                                <DropDownButton text="Sort" icon="cog" className="k-mr-3 h-40"/>
-                                <DropDownButton text="Filter" icon="k-icon k-i-saturation" className="k-mr-3 h-40"/>
+                                <SplitButton text="0 - 20 of 2,000" className="k-mr-3 h-40 eNum"/>
+                                <DropDownButton text="Sort" icon="cog" className="k-mr-3 h-40 Sort"/>
+                                <DropDownButton text="Filter" icon="k-icon k-i-saturation" className="k-mr-3 h-40 filter"/>
                                 <SplitButton text="Add" className="k-mr-3 h-40 primary-button add-button w-120px">
                                 <SplitButtonItem text="Add Product" />
                                 <SplitButtonItem text="Add Product Group" />
@@ -48,10 +46,19 @@ class CustomerMaster extends React.Component {
                             data={[...products]}
                         >
                             <Column
+                                title=" "
+                                cell={() => (
+                                    <td style={{paddingTop: "22px"}}>
+                                        <img className="svg-filter" src={Dot3} alt={"dot"} width={"15px"} height={"25px"}/>
+                                    </td>
+                                )}
+                                width={"70px"}
+                            />
+                            <Column
                                 field={<Checkbox defaultChecked={false}/>}
                                 cell={props => (
                                     <td>
-                                        <Checkbox/>
+                                        <Checkbox style={{backgroundColor:"white"}}/>
                                     </td>
                                 )}
                                 width="70px"
@@ -74,13 +81,13 @@ class CustomerMaster extends React.Component {
                                         <img src={props.dataItem.image} width={"90px"} height={"70px"}/>
                                     </td>
                                 )}
-                                width={"150px"}
+                                width={"130px"}
                             />
                             <Column field="part" title="Part#" width={"200px"}/>
                             <Column field="description" title="Description"/>
-                            <Column field="mfrName" title="Mfr. Name" width={"120px"}/>
+                            <Column field="mfrName" title="Mfr. Name" width={"140px"}/>
                             <Column field="price" title="Price" width={"100px"}/>
-                            <Column field="catalog" title="Catalog" width={"120px"}/>
+                            <Column field="catalog" title="Catalog" width={"140px"}/>
                             <Column field="enteredBy" title="Entered By" width={"140px"}/>
                             <Column
                                 field=""
