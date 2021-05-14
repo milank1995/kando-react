@@ -6,12 +6,17 @@
 .main {
   height: 373.5px;
   width: 1166px;
+  .k-window-content{
+    overflow: hidden;
+  }
 
   .title-bar {
+    width: 1171px;
     align-items: center;
-    height: 25px;
+    height: 23px;
     display: flex;
-    //border-bottom:  1px solid #C6C6C6;
+    border:  1px solid #C6C6C6;
+    border-bottom: none !important;
     p {
       flex-direction: row;
       height: 14px;
@@ -71,14 +76,19 @@
   .k-window-content {
     .example-config {
       .right-side-box {
+        border: none !important;
         .main {
           .All-content {
+            //height: 390px !important;
             .k-widget {
-              height: 364px !important;
+              //height: 379px !important;
+              height: 456px !important;
+
             }
 
             .k-grid {
-              height: 364px !important;
+              //height: 379px !important;
+              height: 456px !important;
               width: 1173px;
 
               .k-grid-header {
@@ -174,6 +184,7 @@
               }
               .k-grid-container{
                 .k-grid-content{
+                  overflow: hidden;
                   tr:nth-child(even) {
                     background-color: #F7F7F7 !important;
                   }

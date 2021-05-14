@@ -39,6 +39,15 @@ const Sidebar = () => {
                 <input type="checkbox" value="Brand1" id="Value3" className="brand"/>
                 <label htmlFor="Value3">Value</label><br/>
             </div>
+            <div className="filter filter-4">
+                <p>Filter-4</p>
+                {/*<input type="checkbox" value="Brand1" id="Value1" className="brand"/>*/}
+                {/*<label htmlFor="Value1">Value</label><br/>*/}
+                {/*<input type="checkbox" value="Brand1" id="Value2" className="brand"/>*/}
+                {/*<label htmlFor="Value2">Value</label><br/>*/}
+                {/*<input type="checkbox" value="Brand1" id="Value3" className="brand"/>*/}
+                {/*<label htmlFor="Value3">Value</label><br/>*/}
+            </div>
             
         </div>
     )

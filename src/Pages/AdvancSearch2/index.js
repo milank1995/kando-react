@@ -15,14 +15,14 @@ const AdvancSearch2 = () =>{
         setModel({layout: e.target.value});
     };
     const toggleDialog = () => {
-        setModel(!setModel);
+        // setModel(!setModel);
     };
 
     return(
         <div className="main">
 
             {showModel &&
-            <Window title={"Advance Search"} onClose={toggleDialog} initialHeight={515} initialWidth={1502}>
+            <Window title={"Advance Search"} onClose={toggleDialog} initialHeight={532} initialWidth={1502}>
                 <div className="example-config">
                         <div className="side-bar">
 
@@ -34,9 +34,12 @@ const AdvancSearch2 = () =>{
 
                     </div>
                     <div className="rightcontent"> </div>
-                    <WindowActionsBar layout={showModel.layout} initialHeight={515} initialWidth={1502}>
-                        <button type="button" className="k-button" onClick={toggleDialog}>Cancel</button>
-                        <button type="button" className="k-button k-primary1" onClick={toggleDialog}>Apply</button>
+                    <WindowActionsBar layout={showModel.layout} initialHeight={573} initialWidth={1502}>
+
+                        <p className="SelectItem">select item to search</p>
+                        <p className="PicupProduct">Picup Product</p>
+                        {/*<p className="k-button" onClick={toggleDialog}>Select Item to Search</p>*/}
+                        {/*<button type="button" className="k-button k-primary1" onClick={toggleDialog}>Picup Product</button>*/}
                     </WindowActionsBar>
             </Window>}
         </div>

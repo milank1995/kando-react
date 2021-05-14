@@ -30,12 +30,14 @@ const searchFilter = [
     {id: "brand9", label: "Brand9"},
     {id: "brand10", label: "Brand10"}
 ];
+
+
 const AdvanceSearch = () => {
 
     const history = useHistory();
     const [showModel, setModel] = useState(false);
-    const [activeClass, setClass] = useState("");
-    const [label, setLabel] = useState("");
+    const [activeClass, setClass] = useState("catalog");
+    const [label, setLabel] = useState("Catalog");
     const handelModel = () => {
         setModel({});
     };

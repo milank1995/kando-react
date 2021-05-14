@@ -1,9 +1,11 @@
 .customer-master {
-  .Sort, .eNum, .filter{
-      border-radius: 3px;
-      background-color: #F7F7F7;
-      border: 1px solid #A2A2A2;
+
+  .Sort, .eNum, .filter {
+    border-radius: 3px;
+    background-color: #F7F7F7;
+    border: 1px solid #A2A2A2;
   }
+
   th {
     height: 16px;
     color: #595959;
@@ -14,7 +16,8 @@
     padding-top: 6px !important;
     padding-bottom: 8px !important;
   }
-  td{
+
+  td {
     vertical-align: top !important;
     font-weight: 500 !important;
     font-size: 16px;
@@ -23,15 +26,19 @@
     padding-top: 19px !important;
     padding-bottom: 13px !important;
   }
+
   td:nth-child(4) {
     padding-left: 0px !important;
   }
+
   td:last-child {
     padding-left: 18px !important;
   }
+
   th:nth-child(6) {
     padding: 16px 22px;
   }
+
   .k-i-cog::before {
     content: url("../../Assets/sort.png");
     height: 16px !important;
@@ -58,6 +65,7 @@
       content: url("../../Assets/Ellipse.jpg");
       margin-left: 5px;
     }
+
     .k-checkbox {
       width: 18px;
       height: 18px;
