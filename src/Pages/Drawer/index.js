@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Drawer, DrawerContent } from '@progress/kendo-react-layout';
+import {Drawer, DrawerContent} from '@progress/kendo-react-layout';
 import {Checkbox, Input} from '@progress/kendo-react-inputs';
 import Image from "../../Assets/crosspng.png"
 import {Button} from "@progress/kendo-react-buttons";
@@ -8,11 +8,11 @@ import "./drawer.scss"
 
 
 const items = [
-    { text: 'Inbox', icon: 'k-i-inbox', selected: true }
+    {text: 'Inbox', icon: 'k-i-inbox', selected: true}
 ];
 
 
-const DrawerComponent = ({toggleDrawer,expanded}) => {
+const DrawerComponent = ({toggleDrawer, expanded}) => {
     const [selectedId, setSelectedId] = React.useState(items.findIndex(x => x.selected === true));
     const handleSelect = (ev) => {
         setSelectedId(ev.itemIndex);
@@ -22,7 +22,7 @@ const DrawerComponent = ({toggleDrawer,expanded}) => {
             <div className="drawer-content">
                 <div className="header">
                     <h2>Column Chooser</h2>
-                    <img className="k-cursor-pointer close-icon" src={Image} onClick={toggleDrawer} />
+                    <img className="k-cursor-pointer close-icon" src={Image} onClick={toggleDrawer}/>
                 </div>
                 <p>10 Columns selected</p>
 
@@ -39,10 +39,11 @@ const DrawerComponent = ({toggleDrawer,expanded}) => {
                     <p><b>Selected Columns</b></p>
 
                     {
-                        [1, 2,3,4,5,6,7,8,9].map((x, index) => (
-                            <div className="k-d-flex justify-content-between k-align-items-center" key={index.toString()}>
+                        [1, 2, 3, 4, 5, 6, 7, 8, 9].map((x, index) => (
+                            <div className="k-d-flex justify-content-between k-align-items-center"
+                                 key={index.toString()}>
                                 <p>Name of the column</p>
-                                <Checkbox defaultChecked={true} />
+                                <Checkbox defaultChecked={true}/>
                             </div>
                         ))
                     }
@@ -52,10 +53,11 @@ const DrawerComponent = ({toggleDrawer,expanded}) => {
                     <p><b>Available Columns</b></p>
 
                     {
-                        [1, 2,3,4,5,6,7,8,9].map((x, index) => (
-                            <div className="k-d-flex justify-content-between k-align-items-center" key={index.toString()}>
+                        [1, 2, 3, 4, 5, 6, 7, 8, 9].map((x, index) => (
+                            <div className="k-d-flex justify-content-between k-align-items-center"
+                                 key={index.toString()}>
                                 <p>Name of the column</p>
-                                <Checkbox  />
+                                <Checkbox/>
                             </div>
                         ))
                     }
@@ -75,9 +77,9 @@ const DrawerComponent = ({toggleDrawer,expanded}) => {
                 expanded={expanded}
                 position={'end'}
                 mode={'overlay'}
-                animation={{ duration: 400 }}
+                animation={{duration: 400}}
                 items={items.map(
-                    (item, index) => ({ ...item, selected: index === selectedId }))}
+                    (item, index) => ({...item, selected: index === selectedId}))}
                 onOverlayClick={toggleDrawer}
                 item={CustomItem}
                 onSelect={handleSelect}
